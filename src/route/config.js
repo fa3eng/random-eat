@@ -5,7 +5,7 @@ export const config = {
   routes: [
     {
       name: "Home",
-      path: "/",
+      path: "/random-eat/dist/",
       component: Home,
       meta: { name: "今天吃点啥" },
     },
