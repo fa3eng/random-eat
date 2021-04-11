@@ -1,0 +1,46 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "parserOptions": { "ecmaVersion": 2018, "sourceType": "module", "ecmaFeatures": { "jsx": true } },
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "env": { "browser": true, "es2017": true, "jest": true },
+  "globals": {
+    "process": true
+  },
+  "settings": {
+    "react": [
+      {
+        "createClass": "createReactClass",
+        "pragma": "React",
+        "version": "detect",
+        "flowVersion": "0.53"
+      }
+    ],
+    "propWrapperFunctions": ["forbidExtraProps", { "property": "freeze", "object": "Object" }],
+    "linkComponents": ["Hyperlink", { "name": "Link", "linkAttribute": "to" }],
+    "import/extensions": [".js", ".jsx"]
+  },
+  "rules": {
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"],
+    "react/display-name": ["warn"],
+    "react/prop-types": ["error"],
+    "space-before-function-paren": ["error", "never"],
+    "comma-dangle": ["error", "always-multiline"],
+    "max-len": ["error", { "code": 100, "ignoreUrls": true, "ignoreComments": true }],
+    "arrow-body-style": "off",
+    "object-curly-newline": "off",
+    "indent": "off",
+    "camelcase": "off",
+    "operator-linebreak": "off",
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "import/no-cycle": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.test.{js,jsx}", "**/*.spec.{js,jsx}"] }
+    ]
+  }
+}
